@@ -1,12 +1,12 @@
 # ISW-Grupo2-2018
 UTN-FRC
 Alumnos:
-###Brian Calcaterra
-    ###Gonzalez Georgina
-    ###Roy Kenny
-    ###Senn Juan 
-    ###Matias
-    ###Ezequiel Soruco
+Brian Calcaterra
+    Gonzalez Georgina
+   Roy Kenny
+  Senn Juan 
+Matias
+Ezequiel Soruco
 ------------------------------------
 
 CONSIGNA: Implementar una User Story determinada usando un lenguaje de programación elegido
