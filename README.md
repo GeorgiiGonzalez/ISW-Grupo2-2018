@@ -3,10 +3,10 @@
 Alumnos:
 * (68582) [Calcaterra,Brian](https://github.com/) 
 * (63867) [Gonzalez,Georgina](https://github.com/GeorgiiGonzalez) 
-* () [Soruco,Ezequiel](https://github.com/ezeqsoruco)
-* () [Senn,Juan](https://github.com/juanpsenn)
-* () [Roy,Kenny](https://github.com/royKenny)
-* () [,Matias](https://github.com/)
+* (71035) [Soruco,Ezequiel](https://github.com/ezeqsoruco)
+* (6) [Senn,Juan](https://github.com/juanpsenn)
+* (59793) [Roy,Kenny](https://github.com/royKenny)
+* (62366) [,Matias](https://github.com/)
 <hr>
 
 ### Objetivo
