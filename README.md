@@ -4,7 +4,7 @@ Alumnos:
 * (68582) [Calcaterra,Brian](https://github.com/) 
 * (63867) [Gonzalez,Georgina](https://github.com/GeorgiiGonzalez) 
 * (71035) [Soruco,Ezequiel](https://github.com/ezeqsoruco)
-* (6) [Senn,Juan](https://github.com/juanpsenn)
+* (69721) [Senn,Juan](https://github.com/juanpsenn)
 * (59793) [Roy,Kenny](https://github.com/royKenny)
 * (62366) [D'Alessandro,Matias](https://github.com/MatiasDalessandro)
 <hr>
