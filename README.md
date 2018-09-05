@@ -6,7 +6,7 @@ Alumnos:
 * (71035) [Soruco,Ezequiel](https://github.com/ezeqsoruco)
 * (6) [Senn,Juan](https://github.com/juanpsenn)
 * (59793) [Roy,Kenny](https://github.com/royKenny)
-* (62366) [,Matias](https://github.com/)
+* (62366) [D'Alessandro,Matias](https://github.com/MatiasDalessandro)
 <hr>
 
 ### Objetivo
