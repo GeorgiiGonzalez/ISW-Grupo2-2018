@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -40,24 +40,22 @@ Partial Class Form1
         Me.txt_telefono_cliente_carga = New System.Windows.Forms.MaskedTextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txt_totalVENTA = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.dgv_clientes = New System.Windows.Forms.DataGridView()
         Me.col_Producto = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.col_Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.col_Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txt_totalVENTA = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.btn_Efectivo = New System.Windows.Forms.Button()
+        Me.btn_Tarjeta = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.bnt_horaProgramada = New System.Windows.Forms.Button()
         Me.bnt_antesPosible = New System.Windows.Forms.Button()
-        Me.btn_Tarjeta = New System.Windows.Forms.Button()
-        Me.btn_Efectivo = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.btn_cancelarPedido = New System.Windows.Forms.Button()
         Me.btn_aceptarPedido = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
@@ -188,10 +186,11 @@ Partial Class Form1
         Me.txt_telefono_cliente_carga.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_telefono_cliente_carga.ForeColor = System.Drawing.Color.Black
         Me.txt_telefono_cliente_carga.Location = New System.Drawing.Point(165, 98)
-        Me.txt_telefono_cliente_carga.Mask = "99999999999"
+        Me.txt_telefono_cliente_carga.Mask = "999999999"
         Me.txt_telefono_cliente_carga.Name = "txt_telefono_cliente_carga"
         Me.txt_telefono_cliente_carga.Size = New System.Drawing.Size(91, 25)
         Me.txt_telefono_cliente_carga.TabIndex = 5
+        Me.txt_telefono_cliente_carga.ValidatingType = GetType(Integer)
         '
         'Label11
         '
@@ -218,6 +217,30 @@ Partial Class Form1
         Me.GroupBox1.TabIndex = 36
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Mi carrito"
+        '
+        'txt_totalVENTA
+        '
+        Me.txt_totalVENTA.Enabled = False
+        Me.txt_totalVENTA.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_totalVENTA.ForeColor = System.Drawing.Color.Black
+        Me.txt_totalVENTA.Location = New System.Drawing.Point(154, 257)
+        Me.txt_totalVENTA.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txt_totalVENTA.Name = "txt_totalVENTA"
+        Me.txt_totalVENTA.Size = New System.Drawing.Size(105, 25)
+        Me.txt_totalVENTA.TabIndex = 15
+        Me.txt_totalVENTA.Text = "0"
+        Me.txt_totalVENTA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Black
+        Me.Label3.Location = New System.Drawing.Point(40, 260)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(92, 17)
+        Me.Label3.TabIndex = 4
+        Me.Label3.Text = "Total a Pagar: "
         '
         'dgv_clientes
         '
@@ -280,36 +303,11 @@ Partial Class Form1
         Me.col_Cantidad.ReadOnly = True
         Me.col_Cantidad.Width = 95
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(40, 260)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(92, 17)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Total a Pagar: "
-        '
-        'txt_totalVENTA
-        '
-        Me.txt_totalVENTA.Enabled = False
-        Me.txt_totalVENTA.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_totalVENTA.ForeColor = System.Drawing.Color.Black
-        Me.txt_totalVENTA.Location = New System.Drawing.Point(154, 257)
-        Me.txt_totalVENTA.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txt_totalVENTA.Name = "txt_totalVENTA"
-        Me.txt_totalVENTA.Size = New System.Drawing.Size(105, 25)
-        Me.txt_totalVENTA.TabIndex = 15
-        Me.txt_totalVENTA.Text = "0"
-        Me.txt_totalVENTA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.btn_Tarjeta)
         Me.GroupBox3.Controls.Add(Me.btn_Efectivo)
+        Me.GroupBox3.Controls.Add(Me.btn_Tarjeta)
         Me.GroupBox3.Controls.Add(Me.Label5)
-        Me.GroupBox3.Controls.Add(Me.Label7)
         Me.GroupBox3.Controls.Add(Me.Label9)
         Me.GroupBox3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.ForeColor = System.Drawing.Color.DodgerBlue
@@ -320,6 +318,42 @@ Partial Class Form1
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Forma de Pago"
         '
+        'btn_Efectivo
+        '
+        Me.btn_Efectivo.BackColor = System.Drawing.Color.White
+        Me.btn_Efectivo.Enabled = False
+        Me.btn_Efectivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_Efectivo.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_Efectivo.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.btn_Efectivo.Image = Global.Pedido_Comercio_adherido.My.Resources.Resources.icons8_efectivo_en_mano_40
+        Me.btn_Efectivo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_Efectivo.Location = New System.Drawing.Point(210, 30)
+        Me.btn_Efectivo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btn_Efectivo.Name = "btn_Efectivo"
+        Me.btn_Efectivo.Size = New System.Drawing.Size(121, 45)
+        Me.btn_Efectivo.TabIndex = 29
+        Me.btn_Efectivo.Text = "Efectivo"
+        Me.btn_Efectivo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_Efectivo.UseVisualStyleBackColor = False
+        '
+        'btn_Tarjeta
+        '
+        Me.btn_Tarjeta.BackColor = System.Drawing.Color.White
+        Me.btn_Tarjeta.Enabled = False
+        Me.btn_Tarjeta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_Tarjeta.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_Tarjeta.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.btn_Tarjeta.Image = Global.Pedido_Comercio_adherido.My.Resources.Resources.icons8_tarjetas_bancarias_40
+        Me.btn_Tarjeta.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_Tarjeta.Location = New System.Drawing.Point(53, 30)
+        Me.btn_Tarjeta.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btn_Tarjeta.Name = "btn_Tarjeta"
+        Me.btn_Tarjeta.Size = New System.Drawing.Size(121, 45)
+        Me.btn_Tarjeta.TabIndex = 28
+        Me.btn_Tarjeta.Text = "Tarjeta"
+        Me.btn_Tarjeta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_Tarjeta.UseVisualStyleBackColor = False
+        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -329,16 +363,6 @@ Partial Class Form1
         Me.Label5.TabIndex = 27
         Me.Label5.Text = "   "
         Me.Label5.Visible = False
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(364, 98)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(20, 17)
-        Me.Label7.TabIndex = 27
-        Me.Label7.Text = "   "
-        Me.Label7.Visible = False
         '
         'Label9
         '
@@ -355,7 +379,6 @@ Partial Class Form1
         Me.GroupBox4.Controls.Add(Me.bnt_horaProgramada)
         Me.GroupBox4.Controls.Add(Me.bnt_antesPosible)
         Me.GroupBox4.Controls.Add(Me.Label4)
-        Me.GroupBox4.Controls.Add(Me.Label8)
         Me.GroupBox4.Controls.Add(Me.Label10)
         Me.GroupBox4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox4.ForeColor = System.Drawing.Color.DodgerBlue
@@ -365,36 +388,6 @@ Partial Class Form1
         Me.GroupBox4.TabIndex = 38
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Hora de Entrega"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(364, 129)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(20, 17)
-        Me.Label4.TabIndex = 27
-        Me.Label4.Text = "   "
-        Me.Label4.Visible = False
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(364, 98)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(20, 17)
-        Me.Label8.TabIndex = 27
-        Me.Label8.Text = "   "
-        Me.Label8.Visible = False
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(364, 58)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(20, 17)
-        Me.Label10.TabIndex = 27
-        Me.Label10.Text = "   "
-        Me.Label10.Visible = False
         '
         'bnt_horaProgramada
         '
@@ -432,41 +425,25 @@ Partial Class Form1
         Me.bnt_antesPosible.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.bnt_antesPosible.UseVisualStyleBackColor = False
         '
-        'btn_Tarjeta
+        'Label4
         '
-        Me.btn_Tarjeta.BackColor = System.Drawing.Color.White
-        Me.btn_Tarjeta.Enabled = False
-        Me.btn_Tarjeta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Tarjeta.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_Tarjeta.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.btn_Tarjeta.Image = Global.Pedido_Comercio_adherido.My.Resources.Resources.icons8_efectivo_en_mano_40
-        Me.btn_Tarjeta.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_Tarjeta.Location = New System.Drawing.Point(210, 30)
-        Me.btn_Tarjeta.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btn_Tarjeta.Name = "btn_Tarjeta"
-        Me.btn_Tarjeta.Size = New System.Drawing.Size(121, 45)
-        Me.btn_Tarjeta.TabIndex = 29
-        Me.btn_Tarjeta.Text = "Tarjeta"
-        Me.btn_Tarjeta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Tarjeta.UseVisualStyleBackColor = False
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(364, 129)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(20, 17)
+        Me.Label4.TabIndex = 27
+        Me.Label4.Text = "   "
+        Me.Label4.Visible = False
         '
-        'btn_Efectivo
+        'Label10
         '
-        Me.btn_Efectivo.BackColor = System.Drawing.Color.White
-        Me.btn_Efectivo.Enabled = False
-        Me.btn_Efectivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Efectivo.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_Efectivo.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.btn_Efectivo.Image = Global.Pedido_Comercio_adherido.My.Resources.Resources.icons8_tarjetas_bancarias_40
-        Me.btn_Efectivo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_Efectivo.Location = New System.Drawing.Point(53, 30)
-        Me.btn_Efectivo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btn_Efectivo.Name = "btn_Efectivo"
-        Me.btn_Efectivo.Size = New System.Drawing.Size(121, 45)
-        Me.btn_Efectivo.TabIndex = 28
-        Me.btn_Efectivo.Text = "Efectivo"
-        Me.btn_Efectivo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Efectivo.UseVisualStyleBackColor = False
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(364, 58)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(20, 17)
+        Me.Label10.TabIndex = 27
+        Me.Label10.Text = "   "
+        Me.Label10.Visible = False
         '
         'btn_cancelarPedido
         '
@@ -514,7 +491,7 @@ Partial Class Form1
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Label11)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "Pedido"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
@@ -549,15 +526,13 @@ Partial Class Form1
     Friend WithEvents col_Cantidad As DataGridViewTextBoxColumn
     Friend WithEvents txt_totalVENTA As TextBox
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents btn_Tarjeta As Button
     Friend WithEvents btn_Efectivo As Button
+    Friend WithEvents btn_Tarjeta As Button
     Friend WithEvents Label5 As Label
-    Friend WithEvents Label7 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents bnt_horaProgramada As Button
     Friend WithEvents bnt_antesPosible As Button
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label8 As Label
     Friend WithEvents Label10 As Label
 End Class
