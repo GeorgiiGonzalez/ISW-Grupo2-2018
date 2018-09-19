@@ -9,6 +9,5 @@
     End Function
 
     Public Sub grabarPedido()
-        pedidoPersistencia.grabarPedido()
     End Sub
 End Class
