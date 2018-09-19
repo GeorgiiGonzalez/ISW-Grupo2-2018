@@ -1,144 +1,163 @@
-﻿Imports Pedido_Comercio_adherido.PedidoPersistencia
-Imports System.Data.OleDb
-
-Public Class Pedido
-
-    Private string_conexion = "Provider=SQLNCLI11;Data Source=LAPTOP-6VOLNCDP\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=DeliverEat"
-
+﻿Public Class Pedido
+    Dim gestorPedido As New PedidoNegocio()
     Dim total As Double
-    Dim medioPago As Boolean
-    Dim hora As Boolean
-    Dim pago
-    Enum tipoPago
-        efectivo
-        tarjeta
-    End Enum
-    Private Sub Pedido_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        txt_descipcion_cliente_carga.Enabled = True
-        txt_direccion_cliente_carga.Enabled = True
-        txt_telefono_cliente_carga.Enabled = True
+    Dim medioPagoElegido As Boolean = False
+    Dim hora_definida As Boolean = False
+    Dim lo_antes_posible As Integer
+    Dim hora As String
+    Dim tipoPago As Integer = 1
+    Dim horaForm As New Hora()
+    Dim efectivoForm As New PagoEnEfectivo()
+    Dim pagaCon As Double
+    Dim tabla As DataTable
 
-
-        'Dim str As String = "insert into pedidos (id_usuario) values (3);"
-        Dim str As String = "select * from pedidos"
-        Dim conexion As New OleDbConnection
-        Dim cmd As New OleDbCommand
-        Dim tabla As New DataTable
-
-        Try
-            conexion.ConnectionString = string_conexion
-            conexion.Open()
-
-            cmd.Connection = conexion
-            cmd.CommandType = CommandType.Text
-            cmd.CommandText = str
-            cmd.ExecuteNonQuery()
-
-            tabla.Load(cmd.ExecuteReader)
-        Catch ex As Exception
-            MsgBox(ex.ToString)
-        Finally
-            '
-            conexion.Close()
-            conexion.Dispose()
-        End Try
-
-
-        Me.dgv_clientes.Rows.Clear()
-
-        For c = 0 To tabla.Rows.Count - 1
-            Me.dgv_clientes.Rows.Add()
-            Me.dgv_clientes.Rows(c).Cells("user").Value = tabla.Rows(c)(0)
-        Next
+    'Load
+    Private Sub Pedido_Load(sender As Object, e As EventArgs) Handles Me.Load
+        cargarDataGridDetalles()
+        calcularTotal()
     End Sub
 
-    Private Sub GroupBox3_Load(sender As Object, e As EventArgs)
-        habilitarPago()
-    End Sub
-    'Metodo para hacer que los botones aparezcan deshabilitados cuando no hay texto y habilitados cuando hay, PERO NO ME FUNCIONA
-    Private Function habilitarPago()
-        If (txt_descipcion_cliente_carga.Text = String.Empty) Or (txt_direccion_cliente_carga.Text = String.Empty) Then
-            btn_Efectivo.Enabled = False
-            btn_Tarjeta.Enabled = False
-        Else
-            btn_Efectivo.Enabled = True
-            btn_Tarjeta.Enabled = True
-        End If
+    'GET y SET
+    Public Function getTotal() As Double
+        Return total
     End Function
 
+    Public Sub setHora(hora As String)
+        Me.hora = hora
+        Me.hora_definida = True
+    End Sub
+
+    Public Sub setPagaCon(monto As Double)
+        pagaCon = monto
+    End Sub
+
+    Public Sub setMedioPagoElegido(v As Boolean)
+        medioPagoElegido = v
+    End Sub
+
+    'Manejo de bonotes
     Private Sub btn_Efectivo_Click(sender As Object, e As EventArgs) Handles btn_Efectivo.Click
-        PagoEnEfectivo.Show()
         btn_Efectivo.BackColor = Color.LawnGreen
         btn_Tarjeta.BackColor = Color.White
-        pago = tipoPago.efectivo
+        If IsNothing(efectivoForm) Then
+            efectivoForm = New PagoEnEfectivo()
+        End If
+        efectivoForm.Show()
+        efectivoForm.BringToFront()
+        tipoPago = 1
     End Sub
+
     Private Sub btn_Tarjeta_Click(sender As Object, e As EventArgs) Handles btn_Tarjeta.Click
         btn_Efectivo.BackColor = Color.White
         btn_Tarjeta.BackColor = Color.LawnGreen
-        pago = tipoPago.tarjeta
+        tipoPago = 2
     End Sub
 
     Private Sub bnt_antesPosible_Click(sender As Object, e As EventArgs) Handles bnt_antesPosible.Click
         bnt_antesPosible.BackColor = Color.LawnGreen
         bnt_horaProgramada.BackColor = Color.White
+        setHora("")
+        Me.hora_definida = True
+        Me.lo_antes_posible = True
     End Sub
-    Private Sub bnt_horaProgramada_Click(sender As Object, e As EventArgs) Handles bnt_horaProgramada.Click
 
+    Private Sub bnt_horaProgramada_Click(sender As Object, e As EventArgs) Handles bnt_horaProgramada.Click
         bnt_antesPosible.BackColor = Color.White
         bnt_horaProgramada.BackColor = Color.LawnGreen
+        If IsNothing(horaForm) Then
+            horaForm = New Hora()
+        End If
+        horaForm.Show()
+        horaForm.BringToFront()
     End Sub
+
     Private Sub btn_nuevo_cliente_carga_Click(sender As Object, e As EventArgs) Handles btn_aceptarPedido.Click
-        Dim str As String = "select * from pedidos"
-        Dim conexion As New OleDbConnection
-        Dim cmd As New OleDbCommand
-        Dim tabla As New DataTable
-
-        Try
-            conexion.ConnectionString = string_conexion
-            conexion.Open()
-
-            cmd.Connection = conexion
-            cmd.CommandType = CommandType.Text
-            cmd.CommandText = str
-            cmd.ExecuteNonQuery()
-
-            tabla.Load(cmd.ExecuteReader)
-        Catch ex As Exception
-            MsgBox(ex.ToString)
-        Finally
-            '
-            conexion.Close()
-            conexion.Dispose()
-        End Try
+        grabarPedido()
     End Sub
+
     Private Sub btn_cancelarPedido_Click(sender As Object, e As EventArgs) Handles btn_cancelarPedido.Click
 
     End Sub
 
+    'Manejo de inserciones y cargas
     Private Sub grabarPedido()
         If validarOperacion() Then
-            'grabar el pedido
+            Try
+                gestorPedido.grabarPedido("1",
+                          txt_direccion_cliente_carga.Text,
+                          txt_descipcion_cliente_carga.Text,
+                          tipoPago.ToString,
+                          hora.ToString,
+                          Convert.ToInt16(lo_antes_posible).ToString,
+                          total.ToString(),
+                          txt_telefono_cliente_carga.Text)
+                grabarDetalles()
+                MessageBox.Show("Su pedido fue registrado con éxito.")
+                Me.Close()
+            Catch ex As Exception
+                MessageBox.Show("Algo no anda bien.")
+            End Try
         End If
     End Sub
 
+    Private Sub grabarDetalles()
+        For Each r As DataRow In tabla.Rows
+            gestorPedido.grabarDetalle(r.Item("id_detalle").ToString,
+                                       r.Item("id_pedido").ToString,
+                                       r.Item("producto").ToString,
+                                       r.Item("cantidad").ToString,
+                                       r.Item("precio_unidad").ToString)
+        Next
+    End Sub
+
+    Private Sub cargarDataGridDetalles()
+        Dim tabla_mostrar As New DataTable()
+        tabla = gestorPedido.getDetalles(1)
+        definirTabla(tabla_mostrar)
+        For Each r As DataRow In tabla.Rows
+            tabla_mostrar.Rows.Add(r.Item("producto"),
+                       r.Item("cantidad"),
+                       r.Item("precio_unidad"))
+        Next
+        dgv_clientes.DataSource = tabla_mostrar
+    End Sub
+
+
+    'Procedimientos
+    Private Sub calcularTotal()
+        Dim t As Double
+        For Each r As DataGridViewRow In dgv_clientes.Rows
+            t += (Convert.ToDouble(r.Cells("Unitario").Value) * Convert.ToDouble(r.Cells("Cantidad").Value))
+        Next
+        total = t
+        txt_totalVENTA.Text = t.ToString()
+    End Sub
+
+    Private Sub definirTabla(ByRef tabla As DataTable)
+        tabla.Columns.Add("Producto")
+        tabla.Columns.Add("Cantidad")
+        tabla.Columns.Add("Unitario")
+    End Sub
+
+    'Validaciones
     Private Function validarCampos() As Boolean
-        If txt_descipcion_cliente_carga.Text = "" Then
-            txt_descipcion_cliente_carga.Select()
-            MessageBox.Show("Ingrese una descripción.")
-            Return False
-        ElseIf txt_direccion_cliente_carga.Text = "" Then
+        If txt_direccion_cliente_carga.Text = "" Then
             txt_direccion_cliente_carga.Select()
             MessageBox.Show("Ingrese una dirección.")
+            Return False
+        ElseIf txt_descipcion_cliente_carga.Text = "" Then
+            txt_descipcion_cliente_carga.Select()
+            MessageBox.Show("Ingrese una descripción.")
             Return False
         End If
         Return True
     End Function
 
     Private Function validarBooleans() As Boolean
-        If Not medioPago Then
+        If Not medioPagoElegido Then
             MessageBox.Show("Especifique un medio de pago.")
             Return False
-        ElseIf Not hora Then
+        ElseIf Not hora_definida Then
             MessageBox.Show("Especifique una hora de entrega.")
             Return False
         End If
@@ -162,5 +181,24 @@ Public Class Pedido
             Return False
         End If
     End Function
+
+    'Manejo de cierres de formularios
+    Public Sub closeHoraForm()
+        horaForm = Nothing
+        If Not hora = "" Then
+            Me.hora_definida = True
+            Me.lo_antes_posible = False
+        Else
+            bnt_antesPosible.BackColor = Color.White
+            bnt_horaProgramada.BackColor = Color.White
+        End If
+    End Sub
+
+    Public Sub closeEfectivoForm()
+        efectivoForm = Nothing
+        If Not medioPagoElegido Then
+            btn_Efectivo.BackColor = Color.White
+        End If
+    End Sub
 
 End Class

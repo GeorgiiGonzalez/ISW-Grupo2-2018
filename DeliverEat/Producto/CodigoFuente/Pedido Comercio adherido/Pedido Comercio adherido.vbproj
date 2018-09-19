@@ -13,6 +13,7 @@
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -25,7 +26,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -87,7 +87,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="capa_datos\PedidoPersistencia.vb" />
+    <Compile Include="capa_datos\BuscadorMaxId.vb" />
+    <Compile Include="capa_datos\Conexion.vb" />
+    <Compile Include="capa_datos\gestion_pedidos\DetallePedidoPersistencia.vb" />
+    <Compile Include="capa_datos\gestion_pedidos\PedidoPersistencia.vb" />
     <Compile Include="capa_negocios\PedidoNegocio.vb" />
     <Compile Include="capa_presentacion\Pedido.vb">
       <SubType>Form</SubType>

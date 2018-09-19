@@ -1,43 +1,33 @@
-﻿Imports System.Data.OleDb
+﻿Imports System.Data.SqlClient
 
 Public Class PedidoPersistencia
+    Dim buscadorMaxId As New BuscadorMaxId()
+    Dim con As New Conexion()
+    Dim sqlComando As New SqlCommand
+    Dim str As String
 
-
-    Public Shared Function InsertSQL(ByVal strSql As String) 'As Integer
-        Dim string_conexion = "Provider=SQLNCLI11;Data Source=LAPTOP-6VOLNCDP\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=DeliverEat"
-        'Dim ret As Integer = 0
-        Dim str As String = "insert into pedidos (id_usuario) values (2);"
-        Dim conexion As New OleDbConnection
-        Dim cmd As New OleDbCommand
-
-        Try
-            ' Establece que conexión usar
-            conexion.ConnectionString = string_conexion
-            ' Abre la conexión
-            conexion.Open()
-
-            cmd.Connection = conexion
-            cmd.CommandType = CommandType.Text
-            ' Establece la instrucción a ejecutar
-            cmd.CommandText = strSql
-            ' Retorna el resultado de ejecutar el comando
-            'ret = 
-            cmd.ExecuteNonQuery()
-        Catch ex As Exception
-            'Throw ex
-            MsgBox(ex.ToString)
-        Finally
-            '
-            ' Cierra la conexión
-            conexion.Close()
-            conexion.Dispose()
-        End Try
-
-        'Return ret
-    End Function
-
-    Friend Sub grabarPedido()
-        Throw New NotImplementedException()
+    Public Sub grabarPedido(id_cliente As String,
+                            dir As String,
+                            desc As String,
+                            id_medio_pago As String,
+                            hora As String,
+                            lo_antes_posible As String,
+                            total As String,
+                            telefono As String)
+        str = "INSERT INTO pedidos (id_pedido, id_cliente, direccion, descripcion, id_medio_pago, hora_programada, lo_antes_posible, total, telefono) VALUES (@id_pedido, @id_cliente, @dir, @desc, @id_medio_pago, @hora, @lo_antes_posible, @total, @tel)"
+        sqlComando.CommandText = str
+        Console.WriteLine(id_cliente & " " & dir & " " & desc & " " & id_medio_pago & " " & lo_antes_posible & " " & total & " " & telefono)
+        sqlComando.Parameters.AddWithValue("@id_pedido", buscadorMaxId.buscarMaxId("pedidos", "id_pedido"))
+        sqlComando.Parameters.AddWithValue("@id_cliente", id_cliente)
+        sqlComando.Parameters.AddWithValue("@dir", dir)
+        sqlComando.Parameters.AddWithValue("@desc", desc)
+        sqlComando.Parameters.AddWithValue("@id_medio_pago", id_medio_pago)
+        sqlComando.Parameters.AddWithValue("@hora", hora)
+        sqlComando.Parameters.AddWithValue("@lo_antes_posible", lo_antes_posible)
+        sqlComando.Parameters.AddWithValue("@total", total)
+        sqlComando.Parameters.AddWithValue("@tel", telefono)
+        con.ejecutarNoQuery(sqlComando)
+        sqlComando.Parameters.Clear()
     End Sub
 
     '-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,14 @@
+C:\Users\John\source\repos\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\bin\Release\Pedido Comercio adherido.exe.config
+C:\Users\John\source\repos\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\bin\Release\Pedido Comercio adherido.exe
+C:\Users\John\source\repos\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\bin\Release\Pedido Comercio adherido.pdb
+C:\Users\John\source\repos\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\bin\Release\Pedido Comercio adherido.xml
+C:\Users\John\source\repos\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Release\Pedido Comercio adherido.vbprojAssemblyReference.cache
+C:\Users\John\source\repos\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Release\Pedido_Comercio_adherido.Pedido.resources
+C:\Users\John\source\repos\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Release\Pedido_Comercio_adherido.Hora.resources
+C:\Users\John\source\repos\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Release\Pedido_Comercio_adherido.Resources.resources
+C:\Users\John\source\repos\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Release\Pedido_Comercio_adherido.PagoEnEfectivo.resources
+C:\Users\John\source\repos\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Release\Pedido Comercio adherido.vbproj.GenerateResource.cache
+C:\Users\John\source\repos\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Release\Pedido Comercio adherido.vbproj.CoreCompileInputs.cache
+C:\Users\John\source\repos\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Release\Pedido Comercio adherido.exe
+C:\Users\John\source\repos\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Release\Pedido Comercio adherido.xml
+C:\Users\John\source\repos\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Release\Pedido Comercio adherido.pdb
