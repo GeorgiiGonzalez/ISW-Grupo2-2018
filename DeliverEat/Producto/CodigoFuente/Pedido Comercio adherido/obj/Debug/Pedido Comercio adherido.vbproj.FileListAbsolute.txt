@@ -25,3 +25,16 @@ C:\Users\Matias\Desktop\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido 
 C:\Users\Matias\Desktop\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Debug\Pedido Comercio adherido.exe
 C:\Users\Matias\Desktop\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Debug\Pedido Comercio adherido.xml
 C:\Users\Matias\Desktop\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Debug\Pedido Comercio adherido.pdb
+C:\Users\Geogi\Documents\4 año\Ingenieria de SW\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\bin\Debug\Pedido Comercio adherido.exe.config
+C:\Users\Geogi\Documents\4 año\Ingenieria de SW\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Debug\Pedido Comercio adherido.exe
+C:\Users\Geogi\Documents\4 año\Ingenieria de SW\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Debug\Pedido Comercio adherido.xml
+C:\Users\Geogi\Documents\4 año\Ingenieria de SW\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Debug\Pedido Comercio adherido.pdb
+C:\Users\Geogi\Documents\4 año\Ingenieria de SW\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\bin\Debug\Pedido Comercio adherido.exe
+C:\Users\Geogi\Documents\4 año\Ingenieria de SW\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\bin\Debug\Pedido Comercio adherido.pdb
+C:\Users\Geogi\Documents\4 año\Ingenieria de SW\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\bin\Debug\Pedido Comercio adherido.xml
+C:\Users\Geogi\Documents\4 año\Ingenieria de SW\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Debug\Pedido Comercio adherido.vbprojResolveAssemblyReference.cache
+C:\Users\Geogi\Documents\4 año\Ingenieria de SW\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Debug\Pedido_Comercio_adherido.Pedido.resources
+C:\Users\Geogi\Documents\4 año\Ingenieria de SW\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Debug\Pedido_Comercio_adherido.Hora.resources
+C:\Users\Geogi\Documents\4 año\Ingenieria de SW\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Debug\Pedido_Comercio_adherido.Resources.resources
+C:\Users\Geogi\Documents\4 año\Ingenieria de SW\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Debug\Pedido_Comercio_adherido.PagoEnEfectivo.resources
+C:\Users\Geogi\Documents\4 año\Ingenieria de SW\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Debug\Pedido Comercio adherido.vbproj.GenerateResource.Cache
