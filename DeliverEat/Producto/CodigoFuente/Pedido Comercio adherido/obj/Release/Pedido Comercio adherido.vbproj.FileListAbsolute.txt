@@ -12,3 +12,16 @@ C:\Users\John\source\repos\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedi
 C:\Users\John\source\repos\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Release\Pedido Comercio adherido.exe
 C:\Users\John\source\repos\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Release\Pedido Comercio adherido.xml
 C:\Users\John\source\repos\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Release\Pedido Comercio adherido.pdb
+C:\Users\Georgina\Documents\4 año\ISW-Grupo2-2018b\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\bin\Release\Pedido Comercio adherido.exe.config
+C:\Users\Georgina\Documents\4 año\ISW-Grupo2-2018b\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\bin\Release\Pedido Comercio adherido.exe
+C:\Users\Georgina\Documents\4 año\ISW-Grupo2-2018b\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\bin\Release\Pedido Comercio adherido.pdb
+C:\Users\Georgina\Documents\4 año\ISW-Grupo2-2018b\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\bin\Release\Pedido Comercio adherido.xml
+C:\Users\Georgina\Documents\4 año\ISW-Grupo2-2018b\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Release\Pedido Comercio adherido.vbprojResolveAssemblyReference.cache
+C:\Users\Georgina\Documents\4 año\ISW-Grupo2-2018b\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Release\Pedido_Comercio_adherido.Pedido.resources
+C:\Users\Georgina\Documents\4 año\ISW-Grupo2-2018b\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Release\Pedido_Comercio_adherido.Hora.resources
+C:\Users\Georgina\Documents\4 año\ISW-Grupo2-2018b\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Release\Pedido_Comercio_adherido.Resources.resources
+C:\Users\Georgina\Documents\4 año\ISW-Grupo2-2018b\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Release\Pedido_Comercio_adherido.PagoEnEfectivo.resources
+C:\Users\Georgina\Documents\4 año\ISW-Grupo2-2018b\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Release\Pedido Comercio adherido.vbproj.GenerateResource.Cache
+C:\Users\Georgina\Documents\4 año\ISW-Grupo2-2018b\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Release\Pedido Comercio adherido.exe
+C:\Users\Georgina\Documents\4 año\ISW-Grupo2-2018b\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Release\Pedido Comercio adherido.xml
+C:\Users\Georgina\Documents\4 año\ISW-Grupo2-2018b\ISW-Grupo2-2018\DeliverEat\Producto\CodigoFuente\Pedido Comercio adherido\obj\Release\Pedido Comercio adherido.pdb
